@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.roomdb"
+    namespace = "com.example.praktikum9"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.roomdb"
+        applicationId = "com.example.praktikum9"
         minSdk = 30
         targetSdk = 36
         versionCode = 1
