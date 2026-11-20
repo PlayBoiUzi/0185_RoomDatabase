@@ -35,10 +35,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.praktikum9.R
 import com.example.praktikum9.room.Siswa
 import com.example.praktikum9.uicontroller.DestinasiNavigasi
-import com.example.praktikum9.uicontroller.SiswaTopAppBar
 import com.example.praktikum9.viewmodel.HomeViewModel
 import com.example.praktikum9.viewmodel.PenyediaViewModel
 import androidx.compose.foundation.clickable
+import com.example.praktikum9.view.route.DestinasiHome
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
@@ -95,9 +95,9 @@ fun HomeScreen(
 @Composable
 fun BodyHome(
     itemSiswa: List<Siswa>,
-    // edit 3
-    modifier: Modifier = Modifier,
-    onSiswaClick: (Int) -> Unit
+    // edit 3 : parameter onSiswaClick
+    onSiswaClick: (Int) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,

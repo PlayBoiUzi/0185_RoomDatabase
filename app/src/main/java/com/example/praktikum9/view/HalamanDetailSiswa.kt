@@ -95,12 +95,13 @@ fun DetailSiswaScreen(
 private fun BodyDetailDataSiswa(
     detailSiswaUiState: DetailSiswaUiState,
     onDelete: () -> Unit,
-    modifier : Modifier = Modifier
+    modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium))
+        modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium)),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
     ) {
-        var deleteConfimationRequired by rememberSaveable { mutableStateOf(false) }
+        var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
 
         DetailDataSiswa(
             siswa = detailSiswaUiState.detailSiswa.toSiswa(),
@@ -108,20 +109,20 @@ private fun BodyDetailDataSiswa(
         )
 
         OutlinedButton(
-            onClick = { deleteConfimationRequired = true },
+            onClick = { deleteConfirmationRequired = true },
             shape = MaterialTheme.shapes.small,
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(stringResource(R.string.delete))
         }
-        if (deleteConfimationRequired) {
+        if (deleteConfirmationRequired) {
             DeleteConfirmationDialog(
-                onDeletConfirm = {
-                    deleteConfimationRequired = false
+                onDeleteConfirm = {
+                    deleteConfirmationRequired = false
                     onDelete()
                 },
-                onDeleteCancel = { deleteConfimationRequired = false },
-                modifier = Modifier.padding( dimensionResource(id = R.dimen.padding_medium))
+                onDeleteCancel = { deleteConfirmationRequired = false },
+                modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium))
             )
         }
     }
@@ -137,35 +138,42 @@ fun DetailDataSiswa(
             contentColor = MaterialTheme.colorScheme.onPrimaryContainer
         )
     ) {
-        BarisDetailData(
-            labelResID = R.string.nama1,
-            itemDetail = siswa.nama,
-            modifier = Modifier.padding(
-                horizontal = dimensionResource(
-                    id = R.dimen.padding_medium
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(id = R.dimen.padding_medium)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
+        ) {
+            BarisDetailData(
+                labelResID = R.string.nama1,
+                itemDetail = siswa.nama,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen.padding_medium
+                    )
                 )
             )
-        )
 
-        BarisDetailData(
-            labelResID = R.string.alamat1,
-            itemDetail = siswa.alamat,
-            modifier = Modifier.padding(
-                horizontal = dimensionResource(
-                    id = R.dimen.padding_medium
+            BarisDetailData(
+                labelResID = R.string.alamat1,
+                itemDetail = siswa.alamat,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen.padding_medium
+                    )
                 )
             )
-        )
 
-        BarisDetailData(
-            labelResID = R.string.telpon1,
-            itemDetail = siswa.telpon,
-            modifier = Modifier.padding(
-                horizontal = dimensionResource(
-                    id = R.dimen.padding_medium
+            BarisDetailData(
+                labelResID = R.string.telpon1,
+                itemDetail = siswa.telpon,
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen.padding_medium
+                    )
                 )
             )
-        )
+        }
     }
 }
 
@@ -182,7 +190,7 @@ private fun BarisDetailData(
 
 @Composable
 private fun DeleteConfirmationDialog(
-    onDeletConfirm: () -> Unit,
+    onDeleteConfirm: () -> Unit,
     onDeleteCancel: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -197,7 +205,7 @@ private fun DeleteConfirmationDialog(
             }
         },
         confirmButton = {
-            TextButton(onClick = onDeletConfirm) {
+            TextButton(onClick = onDeleteConfirm) {
                 Text(stringResource(R.string.yes))
             }
         }
