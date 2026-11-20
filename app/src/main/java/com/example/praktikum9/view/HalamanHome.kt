@@ -38,6 +38,7 @@ import com.example.praktikum9.uicontroller.DestinasiNavigasi
 import com.example.praktikum9.uicontroller.SiswaTopAppBar
 import com.example.praktikum9.viewmodel.HomeViewModel
 import com.example.praktikum9.viewmodel.PenyediaViewModel
+import androidx.compose.foundation.clickable
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
