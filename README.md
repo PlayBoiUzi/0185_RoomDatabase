@@ -6,4 +6,13 @@ DAN HASIL NYA
 
 <img width="371" height="827" alt="Screenshot 2026-11-13 190536" src="https://github.com/user-attachments/assets/8dd7dce7-6e8a-4f19-8e30-706b3ff8392b" />
 
+<img width="321" height="674" alt="image" src="https://github.com/user-attachments/assets/022fa7ec-8503-4433-9512-0f7ae4848bee" />
+
+<img width="322" height="681" alt="image" src="https://github.com/user-attachments/assets/30af4141-0b6e-454a-a9e1-08a29d7bad2c" />
+
+<img width="319" height="687" alt="image" src="https://github.com/user-attachments/assets/095d7c38-5032-4532-a3b5-8fb5eb8bd834" />
+
+SETELAH DI HAPUS 
+<img width="346" height="711" alt="image" src="https://github.com/user-attachments/assets/f7d90e58-edc4-475b-bb19-8efa7304d248" />
+
 
