@@ -12,4 +12,7 @@ import androidx.compose.runtime.setValue
 
 
 
+class EditViewModel(
+    savedStateHandle: SavedStateHandle,
+    private val repositoriSiswa: RepositoriSiswa): ViewModel() {
 
